@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".fragment.ProfileFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:text="loading..."
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_14ssp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnrPlaymates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivMyImage"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:contentDescription="@string/challenges"
+                android:src="@drawable/img_avatar_1"
+                app:civ_border_color="@color/orange"
+                app:civ_border_width="@dimen/_2sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clProgress"
+                android:layout_weight="1"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/circle_shape"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circle_progress_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/img_streak"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/progress" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:gravity="center"
+                android:id="@+id/myGols"
+                android:text="-"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_white_rounded_corners_yellow"
+                app:drawableStartCompat="@drawable/img_gols" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tvBadges"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:gravity="center"
+                android:text="@string/_8_badges"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_white_rounded_corners_yellow"
+                app:drawableStartCompat="@drawable/img_verified" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvGolPals"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:text="@string/golpals"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_14ssp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_playing_to_find_new_golpals"
+            android:id="@+id/tvNogolpal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnrGolpals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlHeader"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_1"
+                        app:civ_border_color="@color/orange"
+                        app:civ_border_width="@dimen/_2sdp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage1"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_2"
+                        app:civ_border_color="@color/orangeLight"
+                        app:civ_border_width="@dimen/_2sdp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage2"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_3"
+                        app:civ_border_color="@color/orangeLight"
+                        app:civ_border_width="@dimen/_2sdp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage3"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_9"
+                        app:civ_border_color="@color/orangeLight"
+                        app:civ_border_width="@dimen/_2sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserImage4"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:contentDescription="@string/challenges"
+                            android:src="@drawable/img_avatar_4"
+                            app:civ_border_color="@color/orangeLight"
+                            app:civ_border_width="@dimen/_2sdp"
+                            app:civ_circle_background_color="@color/white" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserImage5"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:contentDescription="@string/challenges"
+                            android:src="@drawable/img_avatar_5"
+                            app:civ_border_color="@color/orangeLight"
+                            app:civ_border_width="@dimen/_2sdp"
+                            app:civ_circle_background_color="@color/blackTranslucent" />
+
+                        <TextView
+                            android:id="@+id/tvMoreCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@id/ivUserImage5"
+                            android:layout_alignEnd="@id/ivUserImage5"
+                            android:layout_centerVertical="true"
+                            android:elevation="@dimen/_10sdp"
+                            android:fontFamily="@font/mplus_rounded_1c_semibold"
+                            android:gravity="center"
+                            android:text="34+"
+                            android:textColor="@color/orangeLight"
+                            android:textSize="@dimen/_12ssp" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </HorizontalScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/tvActiveChallenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/_10sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:text="@string/active_challenges"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_14ssp"/>
+            <TextView
+                android:id="@+id/tvShowChallenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:text="@string/more"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_10ssp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvNoChallengeExist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_active_challenge_found"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:ellipsize="end"
+            android:background="@drawable/ic_rectangle_8"
+            android:maxLines="1"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+        <LinearLayout
+            android:id="@+id/lnrActiveChallengeHolder"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/ic_rectangle_8"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivChallengeLogo"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/img_challenge_1"
+                android:visibility="visible"
+                android:layout_margin="@dimen/_12sdp"
+                android:contentDescription="@string/challenges" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvChallengeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/queen_of_friendship"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/orange"
+                    android:ellipsize="end"
+                    android:visibility="visible"
+                    android:maxLines="1"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+                <TextView
+                    android:id="@+id/tvChallengeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:fontFamily="@font/mplus_rounded_1c_bold"
+                    android:text="@string/meet_250_new_playmates"
+                    android:textColor="@color/orange"
+                    android:maxLines="2"
+                    android:visibility="visible"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ProgressBar
+                    android:id="@+id/progressChallenge"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:progressTint="@color/orangeLight"
+                    android:progressBackgroundTint="@color/lightGrey"
+                    android:indeterminate="false"
+                    android:visibility="visible"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:progress="75"
+                    android:max="100"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/tvLeaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/_10sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:text="@string/leaderboard"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_14ssp"/>
+            <TextView
+                android:id="@+id/tvShowLeaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:text="@string/details"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_10ssp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLeaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/bg_orange_stroke_outline"
+            tools:listitem="@layout/item_leaderboard" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

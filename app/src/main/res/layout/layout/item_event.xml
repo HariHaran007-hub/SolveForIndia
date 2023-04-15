@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:elevation="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:background="@drawable/bg_white_rounded_corners"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivEvent"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/img_event_1"
+            android:contentDescription="@string/challenges"
+            app:riv_corner_radius="@dimen/_12sdp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"/>
+
+        <TextView
+            android:id="@+id/tvOrganizerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/_65sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:elevation="@dimen/_1sdp"
+            android:layout_alignBottom="@id/ivEvent"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="@string/swimming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignStart="@id/ivEvent"
+            android:layout_alignEnd="@id/ivEvent"
+            android:layout_alignBottom="@id/ivEvent"
+            android:background="@drawable/bg_gradient_orange"
+            android:contentDescription="@string/back"
+            app:riv_corner_radius="@dimen/_12sdp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/queen_of_friendship"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/orange"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+        <TextView
+            android:id="@+id/tvAvenueDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/mplus_rounded_1c_bold"
+            android:text="@string/meet_250_new_playmates"
+            android:textColor="@color/orange"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_10ssp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:drawableStartCompat="@drawable/img_calendar_small" />
+        <TextView
+            android:id="@+id/tvEventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/mplus_rounded_1c_bold"
+            android:text="@string/meet_250_new_playmates"
+            android:textColor="@color/orange"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_10ssp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:drawableStartCompat="@drawable/img_clock_small" />
+        <TextView
+            android:id="@+id/tvAvailability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/mplus_rounded_1c_bold"
+            android:text="@string/meet_250_new_playmates"
+            android:textColor="@color/green"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12ssp"
+            android:drawablePadding="@dimen/_5sdp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTicketCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textSize="@dimen/_12ssp"
+        android:text="@string/_70_ninr"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:fontFamily="@font/mplus_rounded_1c_semibold"
+        android:drawablePadding="@dimen/_5sdp"
+        app:drawableTopCompat="@drawable/img_ticket" />
+
+</LinearLayout>

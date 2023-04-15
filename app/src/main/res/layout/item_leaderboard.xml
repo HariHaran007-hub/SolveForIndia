@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnrRoot"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvSno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/mplus_rounded_1c_bold"
+        android:text="1"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/_12ssp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/img_avatar_1"
+            app:civ_border_color="@color/orange"
+            app:civ_border_width="@dimen/_2sdp"
+            android:contentDescription="@string/challenges" />
+        <ImageView
+            android:id="@+id/ivTrophy"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/img_trophy_small"
+            android:layout_alignEnd="@id/ivUserImage"
+            android:layout_alignBottom="@id/ivUserImage"
+            android:visibility="invisible"
+            android:contentDescription="@string/challenges" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="Nikhil"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:textColor="@color/orange"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+    <TextView
+        android:id="@+id/tvGols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mplus_rounded_1c_semibold"
+        android:text="@string/_120"
+        android:textColor="@color/orange"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader"
+        app:drawableStartCompat="@drawable/img_gols" />
+</LinearLayout>

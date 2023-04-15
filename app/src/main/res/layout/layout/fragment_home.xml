@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/lnrHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="invisible"
+        android:background="@drawable/ic_rectangle"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:gravity="center"
+            android:text="@string/explore_your_favorite_sessions"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_12ssp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:drawableEndCompat="@drawable/img_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lnrUpcomingSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/ic_rectangle_8"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivChallengeLogo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_12sdp"
+            android:contentDescription="@string/challenges"
+            android:src="@drawable/img_challenge_1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvChallengeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:maxLines="1"
+                android:text="@string/upcoming_session"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvChallengeDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:maxLines="2"
+                android:text="@string/aerobic_dance_ndelhi_stadium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimeRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/_2_hours_nto_go"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp"
+            app:drawableTopCompat="@drawable/img_clock_small" />
+
+        <ImageView
+            android:id="@+id/ivViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:contentDescription="@string/challenges"
+            android:src="@drawable/img_arrow_right" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnrUpcomingSession"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:fontFamily="@font/mplus_rounded_1c_semibold"
+        android:gravity="center"
+        android:text="@string/amritsar_delhi"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_12ssp"
+        app:drawableStartCompat="@drawable/ic_round_location_on_24" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProgress"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_below="@id/tvLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="85"
+            android:progressDrawable="@drawable/circle_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/progress"
+            android:src="@drawable/img_home_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clProgress"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/leaderboard"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/img_leaderboard" />
+
+        <ImageView
+            android:id="@+id/ivRewards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clProgress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:contentDescription="@string/rewards"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/img_rewards" />
+
+        <ImageView
+            android:id="@+id/ivChallenges"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clProgress"
+            android:layout_weight="1"
+            android:contentDescription="@string/challenges"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/img_challenges" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid
+        android:color="@color/avatar_11"/>
+    <size
+        android:width="@dimen/_75sdp"
+        android:height="@dimen/_75sdp"/>
+    <corners
+        android:radius="@dimen/_15sdp"/>
+</shape>

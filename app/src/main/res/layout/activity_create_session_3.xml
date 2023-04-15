@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.CreateSession3Activity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/back"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_round_arrow_back_ios_24" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@id/ivBack"
+                android:indeterminate="false"
+                android:max="100"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:progress="60"
+                android:progressBackgroundTint="@color/lightGrey"
+                android:progressTint="@color/orangeLight" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mplus_rounded_1c_semibold"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/when"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_12ssp"
+            android:drawablePadding="@dimen/_7sdp"
+            app:drawableStartCompat="@drawable/img_clock_small" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_orange_stroke_curved"
+        android:layout_margin="@dimen/_10sdp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvEventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.75"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/queen_of_friendship"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/orange"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/_15sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:drawablePadding="@dimen/_15sdp"
+                app:drawableStartCompat="@drawable/img_calendar_small"/>
+
+            <ImageView
+                android:id="@+id/ivShowDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/back"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/img_arrow_right" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <FrameLayout
+            android:id="@+id/flCalendarContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp">
+            <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:title_color="@color/black"
+                custom:disable_date_color="#ABABAB"
+                custom:range_color="@color/orange"
+                custom:selected_date_circle_color="@color/orange"/>
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_orange_stroke_curved"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvEventTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.75"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/_0_00_a_m_0_00_a_m"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/orange"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/_15sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:drawablePadding="@dimen/_15sdp"
+                app:drawableStartCompat="@drawable/img_clock_small"/>
+            <ImageView
+                android:id="@+id/ivShowTimePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/back"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/img_arrow_right" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnrTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/from"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/orange"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+                <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:id="@+id/fromTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:picker_displayDays="false"
+                    app:picker_displayDaysOfMonth="false"
+                    app:picker_displayMonth="false"
+                    app:picker_displayMonthNumbers="false"
+                    app:picker_displayYears="false"
+                    app:picker_itemSpacing="@dimen/_2sdp"
+                    app:picker_curvedMaxAngle="45"
+                    app:picker_curved="true"
+                    app:picker_selectorColor="@android:color/transparent"
+                    app:picker_stepSizeHours="1"
+                    app:picker_stepSizeMinutes="1"
+                    app:picker_cyclic="false"
+                    app:picker_textColor="@color/orange"
+                    app:picker_mustBeOnFuture="false"
+                    app:picker_visibleItemCount="7"
+                    app:picker_textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/mplus_rounded_1c_semibold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/to"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/orange"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="@font/mplus_rounded_1c_semibold"/>
+
+                <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:id="@+id/toTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:picker_textSize="@dimen/_10ssp"
+                    app:picker_displayDays="false"
+                    app:picker_displayDaysOfMonth="false"
+                    app:picker_displayMonth="false"
+                    app:picker_displayMonthNumbers="false"
+                    app:picker_displayYears="false"
+                    app:picker_itemSpacing="@dimen/_2sdp"
+                    app:picker_curvedMaxAngle="45"
+                    app:picker_curved="true"
+                    app:picker_selectorColor="@android:color/transparent"
+                    app:picker_stepSizeHours="1"
+                    app:picker_stepSizeMinutes="1"
+                    app:picker_cyclic="false"
+                    app:picker_mustBeOnFuture="false"
+                    app:picker_textColor="@color/orange"
+                    app:picker_visibleItemCount="7"
+                    app:fontFamily="@font/mplus_rounded_1c_semibold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_primary"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:enabled="false"
+        android:text="@string/cont"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:fontFamily="@font/assistant_semibold"
+        android:textSize="@dimen/_12ssp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

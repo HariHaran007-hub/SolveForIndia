@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/ivSplashBackground"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/ivAppLogo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_splash_1"
+        android:contentDescription="@string/background" />
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/mplus_rounded_1c_bold"
+        android:gravity="center"
+        android:text="@string/find_others_n_who_are_playing_near_you_n_and_the_game_you_like"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

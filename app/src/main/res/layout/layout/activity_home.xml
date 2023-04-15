@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/flFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomAppBar"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/_30sdp"
+        android:background="@drawable/bg_tabs"
+        app:hideOnScroll="false"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHome"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/tab_home" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTabActive1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/ivHome"
+                android:layout_alignEnd="@id/ivHome"
+                android:layout_alignBottom="@id/ivHome"
+                android:src="@drawable/img_tab_active_indicator"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivExplore"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/tab_explore" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTabActive2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/ivExplore"
+                android:layout_alignEnd="@id/ivExplore"
+                android:layout_alignBottom="@id/ivExplore"
+                android:src="@drawable/img_tab_active_indicator"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSchedules"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/tab_schedules" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTabActive3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/ivSchedules"
+                android:layout_alignEnd="@id/ivSchedules"
+                android:layout_alignBottom="@id/ivSchedules"
+                android:src="@drawable/img_tab_active_indicator"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/tab_profile"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTabActive4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/ivProfile"
+                android:layout_alignEnd="@id/ivProfile"
+                android:layout_alignBottom="@id/ivProfile"
+                android:src="@drawable/img_tab_active_indicator"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

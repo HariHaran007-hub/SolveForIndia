@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/lnrShowChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".activity.SessionDetailsActivity">
+
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/back"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_round_arrow_back_ios_24" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/mplus_rounded_1c_semibold"
+                    android:gravity="center"
+                    android:text="@string/aerobic_dance"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_12ssp"
+                    app:drawableStartCompat="@drawable/img_fun_play_orange" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnrPlaymates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlHeader"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivMyImage"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/challenges"
+                    android:src="@drawable/img_avatar_1"
+                    app:civ_border_color="@color/orange"
+                    app:civ_border_width="@dimen/_2sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserImage1"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/challenges"
+                            android:src="@drawable/img_avatar_2"
+                            android:visibility="gone"
+                            app:civ_border_color="@color/orangeLight"
+                            app:civ_border_width="@dimen/_2sdp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserImage2"
+                            android:layout_width="@dimen/_45sdp"
+
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/challenges"
+                            android:src="@drawable/img_avatar_3"
+                            android:visibility="gone"
+                            app:civ_border_color="@color/orangeLight"
+                            app:civ_border_width="@dimen/_2sdp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivUserImage3"
+                                android:layout_width="@dimen/_45sdp"
+
+                                android:layout_height="@dimen/_45sdp"
+                                android:contentDescription="@string/challenges"
+                                android:src="@drawable/img_avatar_4"
+                                android:visibility="gone"
+                                app:civ_border_color="@color/orangeLight"
+                                app:civ_border_width="@dimen/_2sdp"
+                                app:civ_circle_background_color="@color/white" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivUserImage4"
+                                android:layout_width="@dimen/_45sdp"
+
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:contentDescription="@string/challenges"
+                                android:src="@drawable/img_avatar_5"
+                                android:visibility="gone"
+                                app:civ_border_color="@color/orangeLight"
+                                app:civ_border_width="@dimen/_2sdp"
+                                app:civ_circle_background_color="@color/blackTranslucent" />
+
+                            <TextView
+                                android:id="@+id/tvMoreCount"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/ivUserImage4"
+                                android:layout_alignEnd="@id/ivUserImage4"
+                                android:layout_centerVertical="true"
+                                android:elevation="@dimen/_10sdp"
+                                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                                android:gravity="center"
+                                android:text="3+"
+                                android:textColor="@color/orangeLight"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ivAddUser"
+                            android:visibility="gone"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/add"
+                            android:src="@drawable/img_add_user" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </HorizontalScrollView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnrSupervisor"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrPlaymates"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivSupervisor1"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_6"
+                        app:civ_border_color="@color/orangeLight"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:civ_circle_background_color="@color/white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivSupervisor2"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:contentDescription="@string/challenges"
+                        android:src="@drawable/img_avatar_7"
+                        app:civ_border_color="@color/orangeLight"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:civ_circle_background_color="@color/blackTranslucent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mplus_rounded_1c_semibold"
+                    android:gravity="center"
+                    android:text="@string/supervisor"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnrEventDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrSupervisor"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/mapNavigiate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_rounded_corners_yellow"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tvDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                                android:gravity="center"
+                                android:text="@string/_2_kms"
+                                android:textColor="@color/orange"
+                                android:textSize="@dimen/_10ssp"
+                                app:drawableStartCompat="@drawable/img_gmap" />
+
+                            <TextView
+                                android:id="@+id/tvDistanceInTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                                android:gravity="center"
+                                android:text="@string/_14_mins_walk"
+                                android:textColor="@color/orange"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <ImageView
+                            android:id="@+id/ivShowMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/back"
+                            android:src="@drawable/img_arrow_right" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_rounded_corners_yellow"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/mplus_rounded_1c_semibold"
+                            android:gravity="center"
+                            android:text="@string/jan_22_22"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10ssp"
+                            app:drawableStartCompat="@drawable/img_calendar_small" />
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:fontFamily="@font/mplus_rounded_1c_semibold"
+                            android:gravity="center"
+                            android:text="@string/_11_00_a_m"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10ssp"
+                            app:drawableStartCompat="@drawable/img_clock_small" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivSession"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="@string/challenges"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_park_2"
+                        app:riv_corner_radius="@dimen/_12sdp"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="false" />
+
+                    <TextView
+                        android:id="@+id/tvAvenue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivSession"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:elevation="@dimen/_1sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/mplus_rounded_1c_semibold"
+                        android:gravity="center"
+                        android:maxWidth="@dimen/_65sdp"
+                        android:maxLines="2"
+                        android:text="@string/delhi_stadium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignStart="@id/ivSession"
+                        android:layout_alignEnd="@id/ivSession"
+                        android:layout_alignBottom="@id/ivSession"
+                        android:background="@drawable/bg_gradient_orange"
+                        android:contentDescription="@string/back"
+                        app:riv_corner_radius="@dimen/_12sdp"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="false" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/tvEquipmentStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrEventDetails"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg__rounded_corners_green_outline"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:gravity="start"
+                android:text="@string/hurray_nwe_got_everything_we_need"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/img_arrow_right"
+                app:drawableStartCompat="@drawable/img_equipment_status"
+                app:drawableTint="@color/green" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEquipmentStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_button_primary"
+                android:ellipsize="end"
+                android:fontFamily="@font/assistant_semibold"
+                android:maxLines="1"
+                android:text="@string/i_gol"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEquipmentStatus"
+                android:id="@+id/tvAlreadyExist"
+                android:text="@string/you_ve_already_joined_this_session"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/mplus_rounded_1c_semibold"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"
+                android:textSize="@dimen/_14ssp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lnrShowChat"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_top_corners_curved_yellow"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:contentDescription="@string/show"
+            android:src="@drawable/img_show" />
+
+        <RelativeLayout
+            android:id="@+id/rlChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:padding="@dimen/_15sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/ivSend"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/assistant"
+                android:hint="@string/type_something"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGrey"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ivSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/add"
+                android:src="@drawable/img_send" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
