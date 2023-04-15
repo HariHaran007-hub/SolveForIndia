@@ -11,8 +11,68 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SolveForIndia"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEVkA18stLc2gjFLO59Pt_-jKp2a2xesY" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.GoogleSignInUserDetails"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.VerifyPhoneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.CreateSession4Activity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.CreateSession3Activity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.CreateSession2Activity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.CreateSession1Activity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.SessionDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.RewardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.LeaderboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.ChallengeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.AvatarActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.CreateProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GolGolSecondary" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +80,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
